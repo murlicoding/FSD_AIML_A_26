@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            MARGIN: 20px;
+            width: 80%;
+            background-color: lightblue;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+    <script>
+        const ele = document.getElementById("data");
+        async function loadProducts(URL) {
+            try {
+                const res = await fetch(URL);
+                const data = await res.json();
+                console.log("data=", data);
+            } catch (err) {
+                console.log("Error in loading products", err);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <TABLE>
+        <thead>
+            <tr>
+                <th>sr.no.</th>
+                <th>title</th>
+                <th>category</th>
+                <th>price</th>
+                <th>rating</th>
+                <th>stock</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </TABLE>
+</body>
+
+</html>
